@@ -57,7 +57,7 @@ int darknet_test_detector(char *cfgfile, char *weightfile, char *filename, float
     float *X = sized.data;
     time=clock();
     network_predict(net, X);
-    printf("%s: R_API Predicted in %f seconds.\n", input, sec(clock()-time));
+    printf("%s: Predicted in %f seconds.\n", input, sec(clock()-time));
     get_region_boxes(l, 1, 1, thresh, probs, boxes, 0, 0, hier_thresh);
     if (l.softmax_tree && nms) do_nms_obj(boxes, probs, l.w*l.h*l.n, l.classes, nms);
     else if (nms) do_nms_sort(boxes, probs, l.w*l.h*l.n, l.classes, nms);
