@@ -212,7 +212,7 @@ void draw_detections(image im, int num, float thresh, box *boxes, float **probs,
             int top   = (b.y-b.h/2.)*im.h;
             int bot   = (b.y+b.h/2.)*im.h;
 
-            printf("left: %d right: %d top: %d bottom: %d", left, right, top, bot)
+            printf("left: %d right: %d top: %d bottom: %d", left, right, top, bot);
 
             if(left < 0) left = 0;
             if(right > im.w-1) right = im.w-1;
