@@ -70,7 +70,7 @@ int darknet_test_detector(char *cfgfile, char *weightfile, char *filename, float
       }
     }
     
-    printf("Boxes: %d of which %d above the threshold.\n", l.w*l.h*l.n, boxes_abovethreshold);
+    printf("v2 Boxes: %d of which %d above the threshold.\n", l.w*l.h*l.n, boxes_abovethreshold);
     draw_detections(im, l.w*l.h*l.n, thresh, boxes, probs, names, alphabet, l.classes);
     save_image(im, "predictions");
     
